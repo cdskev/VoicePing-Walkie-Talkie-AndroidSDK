@@ -3,6 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'maven-publish'
 
+def localProperties = getLocalProperties()
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -14,6 +16,10 @@ android {
         versionName "1.1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         setProperty("archivesBaseName", "voiceping-sdk-$versionName")
+
+        // SDK constants
+        buildConfigField("String", "DEFAULT_SERVER_URL", "\"" + localProperties['vpDefaultServerUrl'] + "\"")
+
     }
     buildTypes {
         release {

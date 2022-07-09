@@ -14,7 +14,7 @@ import com.smartwalkie.voicepingsdk.model.AudioParam
  * Main class of VoicePing.
  */
 object VoicePing {
-    private const val DEFAULT_SERVER_URL: String = "wss://router-lite.voiceping.info"
+    private const val DEFAULT_SERVER_URL: String = BuildConfig.DEFAULT_SERVER_URL;
     private lateinit var audioParam: AudioParam
     private lateinit var player: Player
     private lateinit var connection: Connection

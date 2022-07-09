@@ -1,1 +1,1 @@
-include ':app', ':voiceping-sdk'
+include ':voiceping-sdk'
